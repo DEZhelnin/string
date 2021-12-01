@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main(){
+    setlocale(LC_ALL, "Rus");
+char s[50];
+size_t i = 0;
+cin.getline(s, 50);
+while (s[i] != ' ')i++;
+    cout << s[++i] << '.';
+while (s[i] != ' ') i++;
+    cout << s[++i] << ". ";
+i = 0;
+while (s[i] != ' ') cout << s[i++];
+}
