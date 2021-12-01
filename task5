@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main(){
+    setlocale(LC_ALL, "Rus");
+	const size_t S = 255;
+	char str[S];
+	const size_t T = 25;
+	char slovo[T];
+	cin.getline(str, sizeof(str));
+	cin.getline(slovo, sizeof(slovo));
+	size_t k = 0;
+	size_t len = strlen(slovo);
+	for (const char* strok = str;(strok = strstr(strok, slovo)) != nullptr; strok += len){
+		if (not (strok != str && isalnum((unsigned char)*(strok - 1)) ||isalnum((unsigned char)*(strok + len)))){
+			k++;
+		}
+	}
+	cout <<k;
+}
