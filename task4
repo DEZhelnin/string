@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main(){
+    setlocale(LC_ALL, "Rus");
+	string f;
+	string bak;
+	cin >> f;
+	cin >> bak;
+	string newf = f.substr(0, f.find_last_of('.')) + "." + bak;
+	cout << newf;
+}
